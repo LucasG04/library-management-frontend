@@ -5,14 +5,20 @@
       <mat-card-title>{{ book.title }}</mat-card-title>
       <mat-card-subtitle>{{ book.author }}</mat-card-subtitle>
     </mat-card-header>
-    <img mat-card-image [src]="book.imageUrl" alt="Cover of {{ book.title }}" />
+    <!-- <img mat-card-image [src]="book.imageUrl" alt="Cover of {{ book.title }}" /> -->
     <mat-card-actions class="card-actions">
       <button mat-raised-button color="primary" (click)="toogleStatus(book)">
-        {{ book.status === bookStatus.AVAILABLE ? 'Ausleihen' : 'Zurückgeben' }}
+        {{ book.status === bookStatus.AVAILABLE ? "Ausleihen" : "Zurückgeben" }}
       </button>
-      <mat-icon class="status-icon" aria-hidden="false" [attr.aria-label]="'Book is ' + book.status.toString().toLowerCase()"
-        [ngStyle]="{'color': book.status === bookStatus.AVAILABLE ? 'green' : 'grey'}"
-        fontIcon="check_circle" />
+      <mat-icon
+        class="status-icon"
+        aria-hidden="false"
+        [attr.aria-label]="'Book is ' + book.status.toString().toLowerCase()"
+        [ngStyle]="{
+          color: book.status === bookStatus.AVAILABLE ? 'green' : 'grey'
+        }"
+        fontIcon="check_circle"
+      />
     </mat-card-actions>
   </mat-card>
   }
