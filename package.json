@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "rm -rf dist && ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
+    "test": "ng test --watch --browsers=Chrome",
+    "test:ci": "ng test --watch=false --browsers=ChromeHeadlessNoSandbox --progress=false",
     "serve:ssr:library-management": "node dist/library-management/server/server.mjs",
     "lint": "ng lint"
   },
