@@ -7,8 +7,6 @@ import { MatToolbarModule } from '@angular/material/toolbar';
   standalone: true,
   imports: [RouterOutlet, MatToolbarModule],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
 })
-export class AppComponent {
-  title = 'library-management';
-}
+export class AppComponent {}
