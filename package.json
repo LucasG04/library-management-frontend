@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "rm -rf dist && ng build",
+    "build": "rm -rf dist && ng build --progress false --prerender false",
     "watch": "ng build --watch --configuration development",
     "test": "ng test --watch --browsers=Chrome",
     "test:ci": "ng test --watch=false --browsers=ChromeHeadlessNoSandbox --progress=false",
