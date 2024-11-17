@@ -28,7 +28,7 @@ export class BookListComponent implements OnInit {
       .subscribe((books) => (this.books = books));
   }
 
-  toogleStatus(book: Book) {
+  toogleStatus(book: Book): void {
     book.status =
       book.status === BookStatus.AVAILABLE
         ? BookStatus.RENTED
